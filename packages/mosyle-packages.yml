@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: GitHub, npm, PyPI registry search for "mosyle"
+notes: >-
+  Mosyle does not publish a first-party client SDK or CLI. The Mosyle Business
+  API is consumed directly over HTTPS. A community ecosystem of third-party
+  libraries and integrations exists; all are marked official:false. Because no
+  package is first-party, no `SDKs` canonical pointer is emitted.
+packages:
+- language: python
+  registry: pypi
+  name: mosyle
+  url: https://pypi.org/project/mosyle/
+  install: pip install mosyle
+  official: false
+  maintainer: SchoolOfTheOsage (community)
+  description: Mosyle Manager Python API wrapper (third-party).
+- language: hcl
+  registry: github
+  name: terraform-provider-mosyle
+  url: https://github.com/SMillerDev/terraform-provider-mosyle
+  official: false
+  description: Community Terraform provider for Mosyle MDM.
+- language: javascript
+  registry: npm
+  name: "@jupiterone/graph-mosyle-mdm"
+  url: https://www.npmjs.com/package/@jupiterone/graph-mosyle-mdm
+  install: npm install @jupiterone/graph-mosyle-mdm
+  official: false
+  description: JupiterOne integration/graph conversion for Mosyle MDM (third-party).
+- language: python
+  registry: github
+  name: mosyle2snipe
+  url: https://github.com/christovic/mosyle2snipe
+  official: false
+  description: Community tool syncing Mosyle inventory into Snipe-IT.

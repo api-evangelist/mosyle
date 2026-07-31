@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+probe: false
+url: https://business.mosyle.com/security
+certifications:
+- SOC 2 Type II
+compliance_programs:
+- GDPR
+benchmarks:
+- CIS
+- NIST
+- PCI
+data_handling:
+  hosting: United States (Microsoft Azure)
+  encryption_at_rest: true
+  encryption_in_transit: TLS
+  employee_auth: multi-factor
+report_access: >-
+  SOC 2 Type II report is available on request via the Support Area inside a
+  Mosyle Business account.
+evidence:
+- source: https://business.mosyle.com/security
+  keywords: [soc 2 type ii, gdpr, azure, encrypted at rest, tls, cis, nist, pci]
+  detail: >-
+    "Mosyle first achieved its SOC 2 Type II certification in 2020." Customer
+    data stored in the US within Azure, encrypted at rest, TLS in transit,
+    multi-factor employee authentication; systems continuously evaluated against
+    CIS, NIST and SOC2 benchmarks.
+- source: https://school.mosyle.com/security
+  detail: Parallel Security & Privacy page for the Mosyle Education product.

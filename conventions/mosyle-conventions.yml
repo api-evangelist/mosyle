@@ -1,0 +1,49 @@
+generated: '2026-07-20'
+method: derived
+source: live probe of https://businessapi.mosyle.com/v1 + third-party integration docs (Axonius, JupiterOne)
+summary: >-
+  Cross-cutting request/response conventions for the Mosyle Business API,
+  observed by probing the live endpoint. The API is a POST-per-operation JSON
+  REST API rooted at https://businessapi.mosyle.com/v1. No idempotency-key,
+  cursor-pagination, or request-id header contract is publicly documented, so
+  those fields are recorded as unknown rather than asserted.
+base_url: https://businessapi.mosyle.com/v1
+protocol: https
+media_type: application/json
+request_style:
+  pattern: operation-endpoint
+  http_method: POST
+  description: >-
+    Each capability is a named operation endpoint under /v1 (observed:
+    /v1/listdevices, /v1/devices). Requests are POSTed with a JSON body; GET on
+    an operation endpoint returns HTTP 405 {"status":405,"message":"INVALID_METHOD"}.
+  examples:
+  - POST /v1/listdevices
+  - POST /v1/devices
+authentication:
+  style: apiKey
+  detail: accessToken (JWT) credential; see authentication/mosyle-authentication.yml
+idempotency:
+  supported: unknown
+  header: null
+  notes: No idempotency-key contract is publicly documented.
+pagination:
+  style: unknown
+  notes: Third-party sync tools page through device lists, but no public cursor/offset contract is documented.
+versioning:
+  scheme: uri-path
+  current: v1
+  detail: Version is embedded in the path (/v1). A /v2 path returns HTTP 404.
+error_envelope:
+  shape: json-object
+  fields: [error, status, message]
+  examples:
+  - '{"error":"accessToken Required"}'
+  - '{"status":405,"message":"INVALID_METHOD"}'
+  cross_ref: errors/mosyle-error-codes.yml
+rate_limiting:
+  signaled: unknown
+cross_links:
+  authentication: authentication/mosyle-authentication.yml
+  errors: errors/mosyle-error-codes.yml
+  lifecycle: lifecycle/mosyle-lifecycle.yml

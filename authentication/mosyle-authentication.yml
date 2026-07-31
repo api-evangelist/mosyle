@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://business.mosyle.com/ (feature listing "Integrations with Google, Microsoft, Okta, AD & API") + live probe of https://businessapi.mosyle.com/v1
+docs: null
+summary:
+  types: [apiKey]
+  api_key_in: [header, body]
+  oauth2_flows: []
+  notes: >-
+    The Mosyle Business API authenticates with an accessToken credential. Since
+    February 8, 2024 the accessToken is issued as a JSON Web Token (JWT) scoped
+    to a Mosyle Business account with permission to read/act on assets. The token
+    is supplied on each request; unauthenticated requests are rejected.
+schemes:
+- name: accessToken
+  type: apiKey
+  in: header
+  parameter_name: accessToken
+  format: jwt
+  description: >-
+    Per-account API access token (a JWT since 2024-02-08) generated in the Mosyle
+    Business admin console. Required on every request. Observed live: a POST to
+    https://businessapi.mosyle.com/v1/listdevices without it returns HTTP 401
+    {"error":"accessToken Required"}.
+  sources: [live-probe]
+evidence:
+- source: https://businessapi.mosyle.com/v1/listdevices
+  observed: 'HTTP 401 {"error":"accessToken Required"}'
+- source: web
+  observed: >-
+    Third-party integrations (Axonius, JupiterOne, Frontline, FMX) document
+    Mosyle Business API auth via an accessToken / JWT plus account credentials.

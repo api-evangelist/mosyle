@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: https://status.mosyle.com/ + live probe of https://businessapi.mosyle.com/v1
+versioning:
+  scheme: uri-path
+  current: v1
+  detail: API version embedded in the request path (/v1); /v2 returns HTTP 404.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  notes: >-
+    No public deprecation policy or RFC 8594 Sunset/Deprecation header support
+    was found. A dated auth change (accessToken JWT migration on 2024-02-08) was
+    communicated to customers via account notices and third-party partners.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.mosyle.com/
+status_page_observed: 'All systems operational ("Status" page, live)'
+deprecated_operations: []

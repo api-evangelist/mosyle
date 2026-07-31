@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://business.mosyle.com/security + live probe of https://businessapi.mosyle.com/v1
+standards:
+- id: soc2-type-ii
+  conforms: true
+  evidence: SOC 2 Type II certified since 2020 (business.mosyle.com/security); report on request.
+- id: gdpr
+  conforms: true
+  evidence: GDPR compliance stated on business.mosyle.com/security.
+- id: tls
+  conforms: true
+  evidence: All client communications to the environment encrypted with TLS; endpoint served over HTTPS.
+- id: cis-benchmarks
+  conforms: true
+  evidence: Systems continuously evaluated against CIS benchmarks; Hardening & Compliance product monitors CIS.
+- id: nist
+  conforms: true
+  evidence: Systems continuously evaluated against NIST standards.
+- id: oauth2
+  conforms: false
+  evidence: API uses an accessToken (JWT) apiKey credential, not an OAuth2 authorization flow.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Error responses are plain JSON objects (error/status/message), not application/problem+json.
+- id: iso-27001
+  conforms: unknown
+  evidence: Not named on the public security page.
+- id: hipaa
+  conforms: unknown
+  evidence: Not named on the public security page.

@@ -1,25 +1,116 @@
 aid: mosyle
 name: Mosyle
-description: Mosyle is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Mosyle is an Apple-focused unified endpoint management and endpoint security
+  company that helps organizations deploy, manage, and protect Mac, iPhone,
+  iPad, Apple TV, Apple Watch, and Vision Pro devices at work. Its cloud-native
+  platform combines enterprise-grade Apple MDM, next-generation endpoint
+  security (automated hardening & compliance, purpose-built Mac antivirus,
+  AI-based automated Zero Trust, and Admin On-Demand privilege management),
+  Apple-specific encrypted-DNS online privacy & security, macOS identity
+  management & SSO (Mosyle Auth 2), and best-in-market apps & patch management.
+  The Mosyle Business REST API (businessapi.mosyle.com/v1) lets IT teams
+  programmatically query and act on managed devices and users using an
+  accessToken (JWT) credential. Mosyle serves 65,000+ organizations worldwide.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://business.mosyle.com/images/logos/mosyle_logo.png
 url: https://raw.githubusercontent.com/api-evangelist/mosyle/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - insight-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: has-public-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Apple
+- Device Management
+- MDM
+- Endpoint Security
+- Identity
+- SSO
+- macOS
+- iOS
+- IT Operations
+- Security
+apis:
+- name: Mosyle Business API
+  description: >-
+    REST API for the Mosyle Business Apple device management platform. Requests
+    are POSTed to operation endpoints under https://businessapi.mosyle.com/v1
+    (e.g. listdevices, listusers) with a JSON body and an accessToken (JWT)
+    credential. Lets IT teams inventory and act on managed Apple devices and
+    users. Reference is provided to authenticated customers via the Mosyle
+    Business admin console support area.
+  humanURL: https://business.mosyle.com/
+  baseURL: https://businessapi.mosyle.com/v1
+  tags:
+  - Device Management
+  - MDM
+  - Apple
+  properties:
+  - type: Authentication
+    url: authentication/mosyle-authentication.yml
+  - type: Conventions
+    url: conventions/mosyle-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mosyle-error-codes.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/mosyle-domain-security.yml
 - type: Website
   url: https://mosyle.com/
+- type: Portal
+  url: https://business.mosyle.com/
+- type: Pricing
+  url: https://business.mosyle.com/#pricing
+- type: Blog
+  url: https://business.mosyle.com/blog
+- type: SignUp
+  url: https://mybusiness.mosyle.com/signup/
+- type: Login
+  url: https://mybusiness.mosyle.com/
+- type: Support
+  url: https://business.mosyle.com/#support
+- type: StatusPage
+  url: https://status.mosyle.com/
+- type: Compliance
+  url: https://business.mosyle.com/security
+- type: Authentication
+  url: authentication/mosyle-authentication.yml
+- type: Conventions
+  url: conventions/mosyle-conventions.yml
+- type: Lifecycle
+  url: lifecycle/mosyle-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/mosyle-error-codes.yml
+- type: Conformance
+  url: conformance/mosyle-conformance.yml
+- type: TrustCenter
+  url: security/mosyle-trust-center.yml
+- type: Packages
+  url: packages/mosyle-packages.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

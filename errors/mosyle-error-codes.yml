@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: probed
+source: live probe of https://businessapi.mosyle.com/v1 (unauthenticated requests)
+format: json-object
+envelope:
+  fields: [error, status, message]
+  notes: >-
+    The Mosyle Business API returns plain JSON error objects, not RFC 9457
+    application/problem+json. Two envelope shapes were observed live: an
+    {"error": "..."} form for auth failures and a
+    {"status": <code>, "message": "..."} form for method/routing failures.
+errors:
+- http_status: 401
+  code: accessToken Required
+  envelope_field: error
+  observed_body: '{"error":"accessToken Required"}'
+  meaning: Request omitted the required accessToken credential.
+  remediation: Supply a valid accessToken (JWT) issued from the Mosyle Business admin console.
+  source_operation: POST https://businessapi.mosyle.com/v1/listdevices
+- http_status: 405
+  code: INVALID_METHOD
+  envelope_field: message
+  observed_body: '{"status":405,"message":"INVALID_METHOD"}'
+  meaning: Operation endpoint was called with an unsupported HTTP method (e.g. GET instead of POST).
+  remediation: Use POST with a JSON body against the operation endpoint.
+  source_operation: GET https://businessapi.mosyle.com/v1
+- http_status: 404
+  code: not-found
+  envelope_field: null
+  observed_body: 'Ops, something happened!'
+  meaning: Unknown route / unsupported API version (e.g. /v2).
+  remediation: Use the supported /v1 base path.
+  source_operation: GET https://businessapi.mosyle.com/v2
