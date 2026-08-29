@@ -12,6 +12,17 @@ description: >-
   The Mosyle Business REST API (businessapi.mosyle.com/v1) lets IT teams
   programmatically query and act on managed devices and users using an
   accessToken (JWT) credential. Mosyle serves 65,000+ organizations worldwide.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
