@@ -64,6 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Mosyle is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Mosyle is an Apple-focused unified endpoint management and endpoint security company that helps organizations deploy, manage, and protect Mac, iPhone, iPad, Apple TV, Apple Watch, and Vision Pro devices at work. Its cloud-native platform combines enterprise-grade Apple MDM, next-generation endpoint security (automated hardening & compliance, purpose-built Mac antivirus, AI-based automated Zero Trust, and Admin On-Demand privilege management), Apple-specific encrypted-DNS online privacy & security, macOS identity management & SSO (Mosyle Auth 2), and best-in-market apps & patch management. The Mosyle Business REST API (businessapi.mosyle.com/v1) lets IT teams programmatically query and act on managed devices and users using an accessToken (JWT) credential. Mosyle serves 65,000+ organizations worldwide.
 
-Backed by: insight-partners — https://mosyle.com/
+**Areas:** Company · Apple · Device Management · MDM · Endpoint Security · Identity · SSO · macOS · iOS · IT Operations · Security
+
+## Mosyle on APIs.io
+
+Everything profiled for Mosyle is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mosyle/](https://apis.io/providers/mosyle/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Mosyle Business API](https://apis.io/apis/mosyle/mosyle-business-api/) — REST API for the Mosyle Business Apple device management platform. Requests are POSTed to operation endpoints under https://businessapi.mosyle.com/v1 (e.g.…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Mosyle Authentication](https://apis.io/security/mosyle/mosyle-authentication/)
+- [Mosyle Domain Security](https://apis.io/security/mosyle/mosyle-domain-security/)
+- [Mosyle Trust Center](https://apis.io/security/mosyle/mosyle-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://mosyle.com/)
+- [Pricing](https://business.mosyle.com/#pricing)
+- [Sign up](https://mybusiness.mosyle.com/signup/)
+- [Support](https://business.mosyle.com/#support)
+- [Blog](https://business.mosyle.com/blog)
+- [Compliance](https://business.mosyle.com/security)
+- [Status](https://status.mosyle.com/)
+
+## API Evangelist rating
+
+**Kin Score 22.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 28.9 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mosyle/](https://apis.io/providers/mosyle/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mosyle: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mosyle/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
